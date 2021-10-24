@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "167134331884",
+    "project_id": "salonkita-utspbp-97546",
+    "storage_bucket": "salonkita-utspbp-97546.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:167134331884:android:9e9830079ad664758936c9",
+        "android_client_info": {
+          "package_name": "com.example.salonkita_utspbp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "167134331884-upoi06a1vs9f95rpgo40jrv1nikmk591.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSBwvilsvpM978C-egwviGDFDZub_aGxc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "167134331884-upoi06a1vs9f95rpgo40jrv1nikmk591.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

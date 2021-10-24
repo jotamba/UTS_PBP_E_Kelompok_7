@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="brg"
+            type="com.example.salonkita_utspbp.ui.fitur.Barang" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@color/cardBackground"
+        android:layout_marginBottom="3dp"
+        tools:context=".RecyclerViewAdapter"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="4dp"
+        android:id="@+id/ParentAdapter">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp">
+                <ImageView
+                    android:loadImage="@{brg.imgURL}"
+                    android:layout_width="110dp"
+                    android:layout_height="120dp"
+                    android:id="@+id/ivGambar">
+                </ImageView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="Nama Barang "
+                        android:textSize="14dp"
+                        android:textColor="@color/PrimaryText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvNamaBarang"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:text="@{brg.nama}"
+                        android:textColor="@color/SecondaryText"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="Kegunaan"
+                        android:textColor="@color/PrimaryText"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tvKegunaan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/SecondaryText"
+                        android:text="@{brg.kegunaan}"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:text="Harga"
+                        android:textSize="14dp"
+                        android:textColor="@color/PrimaryText"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/SecondaryText"
+                        android:text="Rp."
+                        android:textSize="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvHarga"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="7dp"
+                        android:textColor="@color/SecondaryText"
+                        android:text="@{String.valueOf(brg.harga)}"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/order"
+                    android:layout_gravity="right"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="90dp"
+                    android:layout_height="40dp"
+                    app:backgroundTint="#391DA8"
+                    android:text="Beli" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>

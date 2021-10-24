@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_dashboard">
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.example.salonkita_utspbp.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" />
+
+
+
+    <fragment
+        android:id="@+id/nav_logout"
+        android:label="Logout"
+        android:name="com.example.salonkita_utspbp.logOutFragment"
+        tools:layout="@layout/fragment_log_out"/>
+
+    <fragment
+        android:id="@+id/nav_dashboard"
+        android:name="com.example.salonkita_utspbp.ui.dashboard.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_location"
+            app:destination="@id/nav_location" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_order"
+            app:destination="@id/nav_order" />
+        <action
+            android:id="@+id/action_nav_dashboard_to_nav_book"
+            app:destination="@id/nav_book" />
+        <action
+            android:id="@+id/action_nav_order_to_nav_transaksi"
+            />
+    </fragment>
+
+
+    <fragment
+    android:id="@+id/nav_location"
+    android:name="com.example.salonkita_utspbp.ui.fitur.LocationFragment"
+    android:label="Location"
+    tools:layout="@layout/fragment_location"/>
+
+    <fragment
+        android:id="@+id/nav_book"
+        android:name="com.example.salonkita_utspbp.ui.fitur.BookFragment"
+        android:label="Book"
+        tools:layout="@layout/fragment_book">
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_order"
+        android:name="com.example.salonkita_utspbp.ui.fitur.OrderFragment"
+        android:label="Order"
+        tools:layout="@layout/fragment_order">
+        <action
+            android:id="@+id/action_nav_order_to_nav_transaksi2"
+            app:destination="@id/nav_transaksi" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_transaksi"
+        android:name="com.example.salonkita_utspbp.ui.dashboard.TransaksiDashboardFragment"
+        android:label="Transaksi"
+        tools:layout="@layout/fragment_add_transaction">
+    </fragment>
+
+</navigation>
